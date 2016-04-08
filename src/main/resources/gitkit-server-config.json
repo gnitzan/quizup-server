@@ -1,0 +1,8 @@
+{
+  "clientId": "154880045378-4ujpe1c7a8tujadrm9kctvs1qpd60dek.apps.googleusercontent.com",
+  "projectId": "quizup-125414",
+  "serviceAccountEmail": "gal.nitzan.1@gmail.com",
+  "serviceAccountPrivateKeyFile": "/home/gal.nitzan.1/Dropbox/Private/ssl/QuizUp-f582ded9e013.p12",
+  "widgetUrl": "https://i2a.opisoftcare.com/quizup/signin",
+  "cookieName": "gtoken"
+}

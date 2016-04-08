@@ -1,0 +1,47 @@
+{"properties": [
+  {
+    "name": "quizup.name",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.name'"
+  },
+  {
+    "name": "quizup.version",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.version'"
+  },
+  {
+    "name": "quizup.description",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.description'"
+  },
+  {
+    "name": "quizup.web_client_id",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.web_client_id'"
+  },
+  {
+    "name": "quizup.android_client_id",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.android_client_id'"
+  },
+  {
+    "name": "quizup.cloud_messaging_api_kye",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.cloud_messaging_api_kye'"
+  },
+  {
+    "name": "quizup.audience",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.audience'"
+  },
+  {
+    "name": "quizup.email_scope",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.email_scope'"
+  },
+  {
+    "name": "quizup.cloud_messaging_api_key",
+    "type": "java.lang.String",
+    "description": "A description for 'quizup.cloud_messaging_api_key'"
+  }
+]}

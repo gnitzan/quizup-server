@@ -1,0 +1,18 @@
+server:
+  address: 0.0.0.0
+  port: 9080
+spring:
+  data:
+    mongodb:
+      database: quizup
+      host: localhost
+      port: 27017
+quizup:
+  name: quizup
+  version: 1.0
+  description: QuizUp server
+  web_client_id: 154880045378-4ujpe1c7a8tujadrm9kctvs1qpd60dek.apps.googleusercontent.com
+  android_client_id: 154880045378-phlr5qlihnm3kbhl9dc9cbki8je4juu7.apps.googleusercontent.com
+  cloud_messaging_api_key: "AIzaSyDJXQQ2Cwb6jDGt9K0ul8EJZylgX-0WrkQ"
+  audience: 154880045378-4ujpe1c7a8tujadrm9kctvs1qpd60dek.apps.googleusercontent.com
+  email_scope: https://www.googleapis.com/auth/userinfo.email
