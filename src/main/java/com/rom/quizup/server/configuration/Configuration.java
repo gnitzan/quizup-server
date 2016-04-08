@@ -3,6 +3,13 @@ package com.rom.quizup.server.configuration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * 
+ * @author rom
+ * 
+ * The Quizup server configuration class
+ *
+ */
 @Component
 @ConfigurationProperties(prefix="quizup")
 public class Configuration {
