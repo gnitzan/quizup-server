@@ -12,7 +12,9 @@ public class User implements Serializable {
   private String idToken;
   private String systemId;
   private String nickname;
+  private String imageUrl;
 
+  
 	public User() {
 	}
 
@@ -72,5 +74,11 @@ public class User implements Serializable {
 		this.nickname = nickname;
 	}
 
-	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
 }

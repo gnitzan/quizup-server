@@ -17,10 +17,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class QuGamePlay {
 	@Id
 	String id;
+	
 	@DBRef
 	private QuPlayer player;
+	
 	private List<Integer> correctAnswers;
-	private Boolean finished;
+	
+	private Boolean finished = false;
+	private Boolean winner = false;
+
 	private Long timeLeft;
 	private Date createDate;
 	private Date lasModified;
@@ -86,5 +91,17 @@ public class QuGamePlay {
 
 	public void setLasModified(Date lasModified) {
 		this.lasModified = lasModified;
+	}
+	
+	public Boolean getWinner() {
+		return winner;
+	}
+
+	public void setWinner(Boolean winner) {
+		this.winner = winner;
+	}
+
+	public GamePlay getGamePlay() {
+		return new GamePlay(this.player.getPlayer(), correctAnswers, finished, timeLeft, winner);
 	}
 }

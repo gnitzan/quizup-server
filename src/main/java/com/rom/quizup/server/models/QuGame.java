@@ -92,4 +92,13 @@ public class QuGame {
 	public void setLastModified(Date lastModified) {
 		this.lastModified = lastModified;
 	}
+	
+	public Game getGame() {
+		List<GamePlay> gp = new ArrayList<>();
+		for(QuGamePlay qgp : this.gamePlays) {
+			gp.add(qgp.getGamePlay());
+		}
+		
+		return new Game(id, board, gp);
+	}
 }

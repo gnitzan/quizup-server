@@ -15,6 +15,7 @@ import com.google.android.gcm.server.MulticastResult;
 import com.google.android.gcm.server.Result;
 import com.google.android.gcm.server.Sender;
 import com.rom.quizup.server.configuration.Configuration;
+
 import com.rom.quizup.server.models.QuDevice;
 import com.rom.quizup.server.models.QuInvitation;
 import com.rom.quizup.server.models.QuPlayer;

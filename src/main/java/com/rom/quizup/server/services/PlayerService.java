@@ -42,7 +42,7 @@ public class PlayerService {
 			throw new NotFoundException("Player record not found.");
 		}
 
-		return new Player(player.getId().toString(), player.getNickname(), player.getPlayerStatistics());
+		return player.getPlayer();
 	}
 
 	/**
@@ -60,7 +60,7 @@ public class PlayerService {
 		for (QuPlayer player : players) {
 			if (player.getEmail().equals(user.getEmail())) continue;
 			
-			results.add(new Player(player.getId().toString(), player.getNickname()));
+			results.add(player.getPlayer());
 		}
 
 		return results;
@@ -80,7 +80,7 @@ public class PlayerService {
 			player = playersRepository.insert(new QuPlayer(user));
 		}
 
-		return Player.createPlayerFromModel(player);
+		return player.getPlayer();
 	}
 
 	/**
@@ -110,7 +110,7 @@ public class PlayerService {
 
 		playersRepository.save(player);
 
-		return Player.createPlayerFromModel(player);
+		return player.getPlayer();
 	}
 	
 	public QuPlayer registerDevice(QuPlayer player, QuDevice device) {
@@ -170,7 +170,7 @@ public class PlayerService {
 		QuPlayer player = playersRepository.findByToken(token);
 		
 		if (player != null) {
-			return Player.createPlayerFromModel(player);
+			return player.getPlayer();
 		}
 		
 		return null;
@@ -227,7 +227,9 @@ public class PlayerService {
 	protected void updatePlayerStatistics(QuGame game) {
 
 		for (QuGamePlay play : game.getGamePlays()) {
+			
 			QuPlayer player = play.getPlayer();
+			
 			if (player.equals(game.getPlayerWon())) {
 				player.wonGame();
 			}

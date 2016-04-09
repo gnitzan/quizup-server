@@ -155,15 +155,9 @@ public class InvitationService {
 		}
 
 		QuGamePlay inviteePlayer = gamePlaysRepository.insert(new QuGamePlay(invitation.getReceipient()));
-		
-		QuGamePlay senderPlayer = gamePlaysRepository.insert(new QuGamePlay(invitation.getSender()));
+		QuGamePlay senderPlayer  = gamePlaysRepository.insert(new QuGamePlay(invitation.getSender()));
 
-		game.addGamePlay(inviteePlayer);
-		
 		gameService.addGamePlay(game, inviteePlayer);
-		
-		game.addGamePlay(senderPlayer);
-		
 		gameService.addGamePlay(game, senderPlayer);
 	}
 

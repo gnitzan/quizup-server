@@ -10,6 +10,7 @@ public class Player {
 	private String id;
 	private String nickname;
 	private PlayerStatistics statistics = new PlayerStatistics(0, 0);
+	private String imageUrl;
 
 	/**
 	 * Constructor
@@ -19,10 +20,8 @@ public class Player {
 	 * @param nickname
 	 *          player's nickname.
 	 */
-	public Player(String id, String nickname) {
-		this.id = id;
-		this.nickname = nickname;
-		this.statistics = null;
+	public Player(String id, String nickname, String imgUrl) {
+		this(id, nickname, null, imgUrl);
 	}
 
 	/**
@@ -35,10 +34,11 @@ public class Player {
 	 * @param statistics
 	 *          player's game statistics.
 	 */
-	public Player(String id, String nickName, PlayerStatistics statistics) {
+	public Player(String id, String nickName, PlayerStatistics statistics, String imgUrl) {
 		this.id = id;
 		this.nickname = nickName;
 		this.statistics = statistics;
+		this.imageUrl = imgUrl;
 	}
 
 	/**
@@ -64,10 +64,21 @@ public class Player {
 	public PlayerStatistics getStatistics() {
 		return statistics;
 	}
-	
-	public static Player createPlayerFromModel(QuPlayer player) {
-		PlayerStatistics stats = new PlayerStatistics(player.getMultiplayerGamesWon(), player.getMultiplayerGamesPlayed());
-		
-		return new Player(player.getId(), player.getNickname(), stats);
+
+	public String getImageUrl() {
+		return imageUrl;
 	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public void setStatistics(PlayerStatistics statistics) {
+		this.statistics = statistics;
+	}
+
 }

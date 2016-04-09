@@ -1,6 +1,5 @@
 package com.rom.quizup.server.services;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -8,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.rom.quizup.server.models.Game;
-import com.rom.quizup.server.models.GamePlay;
 import com.rom.quizup.server.models.GamePlayStatus;
-import com.rom.quizup.server.models.Player;
 import com.rom.quizup.server.models.QuBoard;
 import com.rom.quizup.server.models.QuGame;
 import com.rom.quizup.server.models.QuGamePlay;
@@ -53,8 +50,7 @@ public class GameService {
 			throw new NotFoundException("Game " + gameId + " not found.");
 		}
 
-		return new Game(
-				game.getId(), getBoard(game.getBoard().getBoardId()), getGamePlays(game));
+		return game.getGame();
 	}
 	
 	/**
@@ -151,6 +147,9 @@ public class GameService {
         currentWinner = whoWinsTie(currentWinner, player);
       }
     }
+    
+    currentWinner.setWinner(true);
+    gamePlaysRepository.save(currentWinner);
 
     game.setPlayerWon(currentWinner.getPlayer());
 
@@ -238,17 +237,6 @@ public class GameService {
 	}
 
 	/**
-	 * Gets a game board by entity key.
-	 *
-	 * @param key
-	 *          the entity key of the board to retrieve.
-	 * @return board entity or null if there is no game entity with this key.
-	 */
-	private QuBoard getBoard(String boardId) {
-		return boardsRepository.findOne(boardId);
-	}
-
-	/**
 	 * Gets a list of all game board entities.
 	 *
 	 * @return non null map of board entities indexed by entity keys.
@@ -295,17 +283,17 @@ public class GameService {
 	/**
 	 * Gets all GamePlay entities for a given game.
 	 *
-	 */
+	 *
 	private List<QuGamePlay> getGamePlayEntities(String gameId) {
 		QuGame game = get(gameId);
 
 		return game.getGamePlays();
-	}
+	}*/
 
 	/**
 	 * Gets all GamePlay resources for a given game.
 	 *
-	 */
+	 *
 	private List<GamePlay> getGamePlays(QuGame game) {
 		List<GamePlay> gamePlays = new ArrayList<GamePlay>();
 
@@ -325,7 +313,7 @@ public class GameService {
 		}
 
 		return gamePlays;
-	}
+	}*/
 	
   /**
    * Checks if the player is the winner of this game.

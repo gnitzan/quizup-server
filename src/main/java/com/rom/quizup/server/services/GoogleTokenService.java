@@ -58,6 +58,7 @@ public class GoogleTokenService {
 		user.setLastName(token.getFamily_name());
 		user.setUsername(token.getName());
 		user.setNickname(token.getName());
+		user.setImageUrl(token.getPicture());
 
 		
 		return user;

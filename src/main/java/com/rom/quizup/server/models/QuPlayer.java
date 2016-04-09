@@ -58,6 +58,8 @@ public class QuPlayer {
 	@Field("lastModified")
 	private Date lastModified;
 	
+	private String imageUrl;
+	
 
 	@PersistenceConstructor
 	public QuPlayer(String id, String token, Boolean active, String email, String nickname, String googlePlusId, Integer multiplayerGamesWon,
@@ -103,6 +105,7 @@ public class QuPlayer {
 		this.multiplayerGamesWon = 0;
 		this.lastModified = new Date();
 		this.registerDate = new Date();
+		this.imageUrl = user.getImageUrl();
 	}
 
 	public void wonGame() {
@@ -279,5 +282,29 @@ public class QuPlayer {
 
 	public void setLastModified(Date lastModified) {
 		this.lastModified = lastModified;
+	}
+	
+	public Date getRegisterDate() {
+		return registerDate;
+	}
+
+	public void setRegisterDate(Date registerDate) {
+		this.registerDate = registerDate;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public Player getPlayer() {
+		PlayerStatistics ps = new PlayerStatistics(this.multiplayerGamesWon, this.multiplayerGamesPlayed);
+		Player p = new Player(id, nickname, ps, imageUrl);
+		p.setImageUrl(this.imageUrl);
+		
+		return p;
 	}
 }
