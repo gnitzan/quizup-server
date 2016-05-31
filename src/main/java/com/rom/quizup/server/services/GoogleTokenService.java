@@ -16,6 +16,11 @@ import org.springframework.stereotype.Service;
 import com.rom.quizup.server.models.GoogleToken;
 import com.rom.quizup.server.models.User;
 
+/**
+ * A service to validate a token received from client's user.
+ * 
+ * @author rom
+ */
 @Service
 public class GoogleTokenService {
 	private static Logger LOG = LoggerFactory.getLogger(GoogleTokenService.class);
@@ -23,6 +28,13 @@ public class GoogleTokenService {
 	@Autowired
 	private MapperService mapperService;
 
+	/**
+	 * validate the token.
+	 * @param token
+	 * @return
+	 * @throws IOException
+	 * 						If there was an error during contacting the Google servers.
+	 */
 	public GoogleToken validateGoogleToken(String token) throws IOException {
 		
 		LOG.debug("Calling Google with token: " + token);
@@ -48,6 +60,13 @@ public class GoogleTokenService {
 		return tokenObj;
 	}
 	
+	/**
+	 * Get the user's information embedded in the token.
+	 * 
+	 * @param sToken
+	 * @return
+	 * @throws IOException
+	 */
 	public User getUserFromToken(String sToken) throws IOException {
 		GoogleToken token = validateGoogleToken(sToken);
 		

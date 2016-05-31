@@ -16,9 +16,12 @@ import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.BoardsRepository;
 import com.rom.quizup.server.repositories.GamePlaysRepository;
 import com.rom.quizup.server.repositories.GamesRepository;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
  * Service for managing games.
+ * 
+ * @author rom
  */
 @Service
 public class GameService {

@@ -19,7 +19,9 @@ import com.rom.quizup.server.entities.QuPlayer;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.GamePlaysRepository;
 import com.rom.quizup.server.repositories.InvitationsRepository;
+import com.rom.quizup.server.utilities.ConflictException;
 import com.rom.quizup.server.utilities.InvitationStatus;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
  * Service for managing invitations.

@@ -20,8 +20,8 @@ import com.rom.quizup.server.models.Player;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.services.DeviceService;
 import com.rom.quizup.server.services.GoogleTokenService;
-import com.rom.quizup.server.services.NotFoundException;
 import com.rom.quizup.server.services.PlayerService;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
  * Handles client's player related functionality using REST. We annotate the

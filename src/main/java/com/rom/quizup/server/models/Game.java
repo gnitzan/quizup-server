@@ -6,8 +6,7 @@ import java.util.List;
 import com.rom.quizup.server.entities.QuBoard;
 
 /**
- * Game definition. This class is used in the Quizup services and is
- * serialized to or from JSON by Spring's REST layer.
+ * Game definition projected between server and clients.
  */
 public class Game implements Serializable {
 	private static final long serialVersionUID = 1L;

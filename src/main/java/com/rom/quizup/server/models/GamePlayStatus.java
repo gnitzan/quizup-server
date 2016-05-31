@@ -5,8 +5,7 @@ import java.util.List;
 
 /**
  * Class representing the status of a game play as reported by the client. This
- * class is used in the Quizup API and is projected to the
- * clients in the generated client libraries.
+ * class is used in the Quizup API and is serialized between server and client.
  */
 public class GamePlayStatus implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -14,8 +13,7 @@ public class GamePlayStatus implements Serializable {
 	private long timeLeft;
 
 	/**
-	 * Default constructor needed by Google Cloud Endpoints to instantiate an
-	 * object from Json passed by the client.
+	 * Default constructor.
 	 */
 	public GamePlayStatus() {
 	}
@@ -51,6 +49,9 @@ public class GamePlayStatus implements Serializable {
 		return timeLeft;
 	}
 	
+	/**
+	 * Overriding toString for logging purposes
+	 */
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();

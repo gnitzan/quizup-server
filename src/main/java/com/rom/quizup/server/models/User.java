@@ -2,6 +2,12 @@ package com.rom.quizup.server.models;
 
 import java.io.Serializable;
 
+/**
+ * The user model projected between clients and the server.
+ * 
+ * @author rom
+ *
+ */
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

@@ -1,30 +1,35 @@
-package com.rom.quizup.server.services;
+package com.rom.quizup.server.utilities;
 
+import com.rom.quizup.server.models.Invitation;
+
+/**
+ * An @see {@link Exception} that represents an @see {@link Invitation}
+ * which its state has changed and the @see {@link Invitation} can not
+ * be accepted.
+ * 
+ * @author rom
+ *
+ */
 public class ConflictException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	public ConflictException() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConflictException(String message) {
 		super(message);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConflictException(Throwable cause) {
 		super(cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConflictException(String message, Throwable cause) {
 		super(message, cause);
-		// TODO Auto-generated constructor stub
 	}
 
 	public ConflictException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
-		// TODO Auto-generated constructor stub
 	}
 
 }

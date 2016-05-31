@@ -9,6 +9,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.rom.quizup.server.utilities.InvitationStatus;
 
+/**
+ * The definition of Invitation table in the database.
+ * 
+ * @author rom
+ *
+ */
 @Document(collection="invitations")
 public class QuInvitation {
 	@Id

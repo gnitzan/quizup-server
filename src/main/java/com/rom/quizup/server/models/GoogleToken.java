@@ -4,9 +4,16 @@ import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@SuppressWarnings("serial")
+/**
+ * The model to hold the token received from Google or clients.
+ * 
+ * @author rom
+ *
+ */
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class GoogleToken implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
 	private String iss;
 	private String sub;
 	private Boolean email_verified;

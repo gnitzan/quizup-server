@@ -4,9 +4,10 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Representation of one player's participation in a game. This class is used in
- * the Quizup Cloud Endpoints API and is projected to the clients in the
- * generated client libraries.
+ * Representation of one player's participation in a game.
+ * It is projected between clients and server.
+ * 
+ * @author rom
  */
 public class GamePlay implements Serializable{
 	private static final long serialVersionUID = 1L;

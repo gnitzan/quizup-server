@@ -10,9 +10,12 @@ import com.rom.quizup.server.entities.QuDevice;
 import com.rom.quizup.server.entities.QuPlayer;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.DevicesRepository;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
- * Service for managing device registration and unregistration.
+ * Service for managing device registration.
+ * 
+ * @author rom
  */
 @Service
 public class DeviceService {

@@ -14,10 +14,13 @@ import com.rom.quizup.server.models.Player;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.PlayersRepository;
 import com.rom.quizup.server.utilities.CollectionUtil;
+import com.rom.quizup.server.utilities.NotFoundException;
 import com.rom.quizup.server.utilities.Strings;
 
 /**
  * Service for managing players.
+ * 
+ * @author rom
  */
 @Service
 public class PlayerService {

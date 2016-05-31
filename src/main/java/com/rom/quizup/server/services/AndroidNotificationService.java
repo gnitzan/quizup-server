@@ -18,6 +18,7 @@ import com.rom.quizup.server.configuration.Configuration;
 import com.rom.quizup.server.entities.QuDevice;
 import com.rom.quizup.server.entities.QuInvitation;
 import com.rom.quizup.server.entities.QuPlayer;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
  * Service for sending push notifications to Android devices using Google Cloud

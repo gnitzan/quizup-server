@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.rom.quizup.server.models.GamePlay;
 
 /**
- * GamePlay model represents one player's play as part of a game.
+ * GamePlay entity represents one player's play as part of a game in the database.
  * A multiplayer game has multiple GamePlay entities. All GamePlay entities for
  * a given game belong to the entity group rooted at the game entity.
  */

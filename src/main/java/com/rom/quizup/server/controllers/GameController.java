@@ -21,11 +21,11 @@ import com.rom.quizup.server.models.Game;
 import com.rom.quizup.server.models.GamePlayStatus;
 import com.rom.quizup.server.models.Invitation;
 import com.rom.quizup.server.models.User;
-import com.rom.quizup.server.services.ConflictException;
 import com.rom.quizup.server.services.GameService;
 import com.rom.quizup.server.services.GoogleTokenService;
 import com.rom.quizup.server.services.InvitationService;
-import com.rom.quizup.server.services.NotFoundException;
+import com.rom.quizup.server.utilities.ConflictException;
+import com.rom.quizup.server.utilities.NotFoundException;
 
 /**
  * Handles client's game related functionality using REST. We annotate the
@@ -180,7 +180,9 @@ public class GameController {
 	 * @param token
 	 * @return
 	 * @throws NotFoundException
+	 * 					If the game or user not found.
 	 * @throws ConflictException
+   * 					If the invitation state has changed and the invitation cannot be accepted.
 	 */
 	@RequestMapping(method = RequestMethod.POST, path="/{gameId}/invitation/{invitationId}/accept")
 	public Map<String, Boolean> acceptInvitation(@PathVariable String gameId, @PathVariable String invitationId, @RequestHeader("gToken") String token) throws NotFoundException, ConflictException {

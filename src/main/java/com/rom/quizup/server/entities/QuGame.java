@@ -12,6 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.rom.quizup.server.models.Game;
 import com.rom.quizup.server.models.GamePlay;
 
+/**
+ * The definition of a game in the database,
+ * 
+ * @author rom
+ *
+ */
 @Document(collection="games")
 public class QuGame {
 	@Id

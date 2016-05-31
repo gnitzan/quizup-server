@@ -9,6 +9,12 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+/**
+ * The definition of a device in the database.
+ * 
+ * @author rom
+ *
+ */
 @Document(collection="devices")
 public class QuDevice {
 	@Id

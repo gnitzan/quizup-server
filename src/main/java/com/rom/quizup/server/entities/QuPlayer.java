@@ -15,6 +15,12 @@ import com.rom.quizup.server.models.Player;
 import com.rom.quizup.server.models.PlayerStatistics;
 import com.rom.quizup.server.models.User;
 
+/**
+ * The definition of the player table in the database.
+ * 
+ * @author rom
+ *
+ */
 @Document(collection="players")
 public class QuPlayer {
 	@Id
