@@ -1,4 +1,4 @@
-package com.rom.quizup.server.models;
+package com.rom.quizup.server.entities;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +10,10 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
+
+import com.rom.quizup.server.models.Player;
+import com.rom.quizup.server.models.PlayerStatistics;
+import com.rom.quizup.server.models.User;
 
 @Document(collection="players")
 public class QuPlayer {

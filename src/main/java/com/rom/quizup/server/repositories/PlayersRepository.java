@@ -5,8 +5,13 @@ import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.rom.quizup.server.models.QuPlayer;
+import com.rom.quizup.server.entities.QuPlayer;
 
+/**
+ * Define methods to access the Players table in database.
+ * 
+ * @author rom
+ */
 public interface PlayersRepository extends MongoRepository<QuPlayer, String> {
 	
 	QuPlayer findByEmail(String email);

@@ -9,7 +9,7 @@ import com.rom.quizup.server.models.PlayerStatistics;
 public class Player {
 	private String id;
 	private String nickname;
-	private PlayerStatistics statistics = new PlayerStatistics(0, 0);
+	private PlayerStatistics statistics;
 	private String imageUrl;
 
 	/**
@@ -37,7 +37,14 @@ public class Player {
 	public Player(String id, String nickName, PlayerStatistics statistics, String imgUrl) {
 		this.id = id;
 		this.nickname = nickName;
-		this.statistics = statistics;
+		
+		if (statistics == null) {
+			// initialize statistics in case we got null on new player
+			statistics = new PlayerStatistics(0, 0);
+		}
+		else {
+			this.statistics = statistics;
+		}
 		this.imageUrl = imgUrl;
 	}
 
@@ -50,6 +57,30 @@ public class Player {
 	}
 
 	/**
+	 * Sets the player's id.
+	 * @param id
+	 */
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 * Get the player's image URL (Google provided).
+	 * @return
+	 */
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	/**
+	 * Set the player's image URL (Google provided)
+	 * @param imageUrl
+	 */
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	/**
 	 * Get the player's nickname.
 	 *
 	 */
@@ -58,25 +89,25 @@ public class Player {
 	}
 
 	/**
-	 * Get the player's statistics.
+	 * Set player's nick name
+	 * @param nickname
+	 */
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	/**
+	 * Get the player's statistics of games played and won.
 	 *
 	 */
 	public PlayerStatistics getStatistics() {
 		return statistics;
 	}
 
-	public String getImageUrl() {
-		return imageUrl;
-	}
-
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
-
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
-
+	/**
+	 * Set player's statistics of games played and won
+	 * @param statistics
+	 */
 	public void setStatistics(PlayerStatistics statistics) {
 		this.statistics = statistics;
 	}

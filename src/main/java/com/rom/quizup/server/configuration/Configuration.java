@@ -4,11 +4,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
+ * Wraps Spring's format configuration file which
+ * holds the Quizup server's configuration.
  * 
  * @author rom
- * 
- * The Quizup server configuration class
- *
  */
 @Component
 @ConfigurationProperties(prefix="quizup")
@@ -22,6 +21,9 @@ public class Configuration {
 	private String audience;
 	private String emailScope;
 
+	/**
+	 * Default constructor
+	 */
 	public Configuration() {
 	}
 

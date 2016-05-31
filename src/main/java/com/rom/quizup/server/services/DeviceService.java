@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rom.quizup.server.models.QuDevice;
-import com.rom.quizup.server.models.QuPlayer;
+import com.rom.quizup.server.entities.QuDevice;
+import com.rom.quizup.server.entities.QuPlayer;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.DevicesRepository;
 

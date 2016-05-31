@@ -1,4 +1,4 @@
-package com.rom.quizup.server.models;
+package com.rom.quizup.server.entities;
 
 import java.util.Date;
 import java.util.List;
@@ -8,8 +8,11 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
- * Board definition. This class is used in the Quizup Cloud Endpoints API and is
- * projected to the clients in the generated client libraries.
+ * Board definition. This class is the only class which is
+ * used as a model and also as an entity since its data is
+ * used both on the client and server.
+ * 
+ * @author rom
  */
 
 @Document(collection = "boards")

@@ -1,4 +1,4 @@
-package com.rom.quizup.server.models;
+package com.rom.quizup.server.entities;
 
 import java.util.Date;
 

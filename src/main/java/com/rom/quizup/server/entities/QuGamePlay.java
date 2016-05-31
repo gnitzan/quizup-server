@@ -1,4 +1,4 @@
-package com.rom.quizup.server.models;
+package com.rom.quizup.server.entities;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,6 +7,8 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.rom.quizup.server.models.GamePlay;
 
 /**
  * GamePlay model represents one player's play as part of a game.

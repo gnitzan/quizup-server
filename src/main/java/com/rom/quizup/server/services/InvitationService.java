@@ -10,12 +10,12 @@ import org.springframework.stereotype.Service;
 
 import com.google.android.gcm.server.Message;
 import com.google.android.gcm.server.Message.Builder;
-import com.rom.quizup.server.models.QuBoard;
-import com.rom.quizup.server.models.QuDevice;
-import com.rom.quizup.server.models.QuGame;
-import com.rom.quizup.server.models.QuGamePlay;
-import com.rom.quizup.server.models.QuInvitation;
-import com.rom.quizup.server.models.QuPlayer;
+import com.rom.quizup.server.entities.QuBoard;
+import com.rom.quizup.server.entities.QuDevice;
+import com.rom.quizup.server.entities.QuGame;
+import com.rom.quizup.server.entities.QuGamePlay;
+import com.rom.quizup.server.entities.QuInvitation;
+import com.rom.quizup.server.entities.QuPlayer;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.GamePlaysRepository;
 import com.rom.quizup.server.repositories.InvitationsRepository;

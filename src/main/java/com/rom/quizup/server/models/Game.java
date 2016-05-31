@@ -3,9 +3,11 @@ package com.rom.quizup.server.models;
 import java.io.Serializable;
 import java.util.List;
 
+import com.rom.quizup.server.entities.QuBoard;
+
 /**
- * Game resource. This class is used in the Quizup services and is
- * projected to the clients in the generated client libraries.
+ * Game definition. This class is used in the Quizup services and is
+ * serialized to or from JSON by Spring's REST layer.
  */
 public class Game implements Serializable {
 	private static final long serialVersionUID = 1L;

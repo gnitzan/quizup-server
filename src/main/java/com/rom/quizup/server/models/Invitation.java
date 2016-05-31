@@ -1,5 +1,6 @@
 package com.rom.quizup.server.models;
 
+import com.rom.quizup.server.entities.QuInvitation;
 import com.rom.quizup.server.utilities.InvitationStatus;
 
 public class Invitation {

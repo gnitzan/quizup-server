@@ -6,12 +6,12 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.rom.quizup.server.entities.QuBoard;
+import com.rom.quizup.server.entities.QuGame;
+import com.rom.quizup.server.entities.QuGamePlay;
+import com.rom.quizup.server.entities.QuPlayer;
 import com.rom.quizup.server.models.Game;
 import com.rom.quizup.server.models.GamePlayStatus;
-import com.rom.quizup.server.models.QuBoard;
-import com.rom.quizup.server.models.QuGame;
-import com.rom.quizup.server.models.QuGamePlay;
-import com.rom.quizup.server.models.QuPlayer;
 import com.rom.quizup.server.models.User;
 import com.rom.quizup.server.repositories.BoardsRepository;
 import com.rom.quizup.server.repositories.GamePlaysRepository;

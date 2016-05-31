@@ -15,10 +15,9 @@ import com.google.android.gcm.server.MulticastResult;
 import com.google.android.gcm.server.Result;
 import com.google.android.gcm.server.Sender;
 import com.rom.quizup.server.configuration.Configuration;
-
-import com.rom.quizup.server.models.QuDevice;
-import com.rom.quizup.server.models.QuInvitation;
-import com.rom.quizup.server.models.QuPlayer;
+import com.rom.quizup.server.entities.QuDevice;
+import com.rom.quizup.server.entities.QuInvitation;
+import com.rom.quizup.server.entities.QuPlayer;
 
 /**
  * Service for sending push notifications to Android devices using Google Cloud
